@@ -1,0 +1,13 @@
+<div class="container">
+  <%= form_for @task, url: {action: "update"}, html: {method: "patch", class: "nifty_form"}, class: "form" do |f| %>
+    <div class="form-group">
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :details, "Details" %>
+      <%= f.text_area :details, size: "60x12", class: "form-control" %>
+    </div>
+    <%= f.submit "Update", class: "btn btn-primary" %>
+  <% end %>
+</div>
